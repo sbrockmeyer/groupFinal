@@ -1,0 +1,608 @@
+@import url('https://fonts.googleapis.com/css2?family=Shojumaru&display=swap');
+
+html {
+    /* background-color: rgb(97, 97, 97); */
+    background-image: url("assests/background.jpg");
+    align-self: stretch;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+html, 
+body, 
+#background { 
+    width: 100vw;
+    min-height: 100vh;
+}
+
+.container {
+    width: 95%;
+    margin: 0 auto;
+}
+
+header {
+    background-color: #cca572e3;
+}
+
+header::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.logo {
+    float: left;
+}
+
+/* Style the search box inside the navigation bar */
+input[type=text] {
+    /* float: right; */
+    padding: 5px;
+    border: none;
+    margin-top: 35px;
+    margin-right: 1px;
+    margin-left: 15px;
+    font-size: 17px;
+}
+
+nav {
+    float: right;
+}
+
+nav ul {
+    margin: 0;
+    margin-right: 50px;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    display: inline-block;
+    margin-left: 70px;
+    padding-top: 35px;
+    font-family: 'Shojumaru', cursive;
+
+    position: relative;
+}
+
+nav a {
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+nav a:hover {
+    font-style: italic;
+}
+
+nav a::before {
+    content: '';
+    display: block;
+    height: 5px;
+    width: 100%;
+    background-color: black;
+
+    position: absolute;
+
+    margin-top: 25px;
+    top: 0;
+    width: 0%;
+
+    transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before{
+    width: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    /* background-color: #e0e0e07a; */
+    background-color: #d489ff48;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    display: inline-block;
+    list-style: none;
+    text-align: center;
+    font-size: small;
+    width: 100%;
+    background-color: #cca572e3;
+    /* border: 5px solid black; */
+    padding: 1px;
+    /* margin: 10px; */
+    /* display: flex;
+    flex-direction: row; */
+}
+
+footer p {
+    font-family: 'Shojumaru', cursive;
+}
+
+.slideshow-container {
+    padding-top: 25px;
+    max-width: 1000px;
+    width: 500px;
+    height: 500px;
+    position: relative;
+    margin: auto;
+}
+
+.prev{
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.prev:hover {
+    background-color: black;
+}
+
+.next{
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    right: 0;
+    border-radius: 3px 0 0 3px;
+
+}
+
+.next:hover {
+    background-color: black;
+}
+
+.text {
+    font-size: 15px;
+    padding: 8px 4px;
+    position: absolute;
+    bottom: 0px;
+    width: 98.3%;
+    text-align: center;
+    font-family: 'Shojumaru', cursive;
+    background-color: rgba(0, 0, 0, 0.438);
+}
+
+.numbertext {
+    margin-top: 25px;
+    padding-top: 25px;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.438);
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: lighten(black,80%);
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.dot:hover {
+    background-color: lighten(black,40%);
+}
+
+.active {
+    background-color: lighten(black,40%);
+}
+
+.monster_img {
+    vertical-align: middle;
+}
+
+.small_monsters{
+    font-family: 'Shojumaru', cursive;
+    float: left;
+    padding-left: 650px;
+}
+
+.large_monsters{
+    font-family: 'Shojumaru', cursive;
+    float: right;
+    padding-right: 650px;
+}
+
+.monsterInfo ul li{
+    display: flex;
+
+    margin: 2px;
+    padding: 2px;
+    border: 3px solid rgb(0, 0, 0);
+    font-family: 'Shojumaru', cursive;
+    color: rgb(0, 0, 0);
+    width: 1700px;
+
+    background-color: rgba(80, 80, 80, 0.253);
+}
+
+.monsterInfo ul{
+    height: 761px; width: 1800px;
+    overflow:hidden; overflow-y:scroll;
+
+    background-color: rgba(27, 27, 27, 0.247);
+}
+
+.itemList ul li{
+    display: flex;
+
+    margin: 2px;
+    padding: 2px;
+    border: 3px solid rgb(0, 0, 0);
+    font-family: 'Shojumaru', cursive;
+    color: rgb(0, 0, 0);
+    width: 1700px;
+    background-color: rgba(80, 80, 80, 0.384);
+}
+
+.itemList ul{
+    height: 761px; width: 1800px;
+    overflow:hidden; overflow-y:scroll;
+
+    background-color: rgba(27, 27, 27, 0.247);
+}
+
+.monsterName {
+    margin: 2px;
+    padding: 2px;
+
+    border: 3px solid rgb(0, 0, 0);
+    background-color: rgba(255, 255, 255, 0.815);
+
+    width: 200px;
+    height: 50px;
+    text-align: center;
+}
+
+.monsterType {
+    margin: 2px;
+    padding: 2px;
+
+    border: 3px solid rgb(0, 0, 0);
+    background-color: rgba(255, 255, 255, 0.815);
+    width: 200px;
+    height: 50px;
+    text-align: center;
+}
+
+.monsterSpecies {
+    margin: 2px;
+    padding: 2px;
+
+    border: 3px solid rgb(0, 0, 0);
+    background-color: rgba(255, 255, 255, 0.815);
+    width: 200px;
+    height: 50px;
+    text-align: center;
+}
+
+.monsterDescription {
+    margin: 2px;
+    padding: 2px;
+
+    border: 3px solid rgb(0, 0, 0);
+    background-color: rgba(255, 255, 255, 0.815);
+    width: 1250px;
+    height: 50px;
+    text-align: center;
+
+        overflow:hidden; overflow-y:scroll;
+}
+
+.itemName {
+    margin: 2px;
+    padding: 2px;
+
+    border: 3px solid rgb(0, 0, 0);
+    background-color: rgba(255, 255, 255, 0.815);
+
+    width: 200px;
+    height: 50px;
+    text-align: center;
+}
+
+.itemRarity {
+    margin: 2px;
+    padding: 2px;
+
+    border: 3px solid rgb(0, 0, 0);
+    background-color: rgba(255, 255, 255, 0.815);
+    width: 200px;
+    height: 50px;
+    text-align: center;
+}
+
+.itemValue {
+    margin: 2px;
+    padding: 2px;
+
+    border: 3px solid rgb(0, 0, 0);
+    background-color: rgba(255, 255, 255, 0.815);
+    width: 200px;
+    height: 50px;
+    text-align: center;
+}
+
+.itemDescription {
+    margin: 2px;
+    padding: 2px;
+
+    border: 3px solid rgb(0, 0, 0);
+    background-color: rgba(255, 255, 255, 0.815);
+    width: 1250px;
+    height: 50px;
+    text-align: center;
+}
+
+.localeList ul li{
+    display: flex;
+
+    margin: 2px;
+    padding: 2px;
+    border: 3px solid rgb(0, 0, 0);
+    font-family: 'Shojumaru', cursive;
+    color: rgb(0, 0, 0);
+    width: 1700px;
+    background-color: rgba(80, 80, 80, 0.384);
+}
+
+.localeList ul{
+    height: 761px; width: 1800px;
+    overflow:hidden; overflow-y:scroll;
+
+    background-color: rgba(27, 27, 27, 0.247);
+}
+
+.localeName {
+    margin: 2px;
+    padding: 2px;
+
+    border: 3px solid rgb(0, 0, 0);
+    background-color: rgba(255, 255, 255, 0.815);
+    width: 200px;
+    height: 50px;
+    text-align: center;
+}
+
+.localeZones {
+    margin: 2px;
+    padding: 2px;
+
+    border: 3px solid rgb(0, 0, 0);
+    background-color: rgba(255, 255, 255, 0.815);
+    width: 200px;
+    height: 50px;
+    text-align: center;
+}
+
+.localeCamps {
+    margin: 2px;
+    padding: 2px;
+
+    border: 3px solid rgb(0, 0, 0);
+    background-color: rgba(255, 255, 255, 0.815);
+    width: 1250px;
+    height: 50px;
+    text-align: center;
+}
+
+
+/* _____________________CONTACT PAGE_______________________ */
+
+#fcf-form {
+    display:block;
+    padding-top: 50px;
+    padding-bottom: 160px;
+}
+
+.fcf-h3:link {
+    /* go magic bullshit */
+    color: black;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+.fcf-h3:visited {
+    /* go magic bullshit */
+    color: lightslategray;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+.fcf-h3:hover {
+    /* go magic bullshit */
+    color: purple;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+.fcf-h3:active {
+    /* go magic bullshit */
+    color: gold;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+.fcf-body {
+    margin: 0;
+    font-family: -apple-system, Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    background-color: rgba(201, 201, 201, 0.527);
+    padding: 30px;
+    padding-bottom: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    max-width: 100%;
+}
+
+.fcf-form-group {
+    margin-bottom: 1rem;
+}
+
+.fcf-input-group {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    width: 100%;
+}
+
+.fcf-form-control {
+    display: block;
+    width: 100%;
+    height: calc(1.5em + 0.75rem + 2px);
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    outline: none;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.fcf-form-control:focus {
+    border: 1px solid #313131;
+}
+
+select.fcf-form-control[size], select.fcf-form-control[multiple] {
+    height: auto;
+}
+
+textarea.fcf-form-control {
+    font-family: -apple-system, Arial, sans-serif;
+    height: auto;
+}
+
+label.fcf-label {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
+
+.fcf-credit {
+    padding-top: 10px;
+    font-size: 0.9rem;
+    color: #545b62;
+}
+
+.fcf-credit a {
+    color: #545b62;
+    text-decoration: underline;
+}
+
+.fcf-credit a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+.fcf-btn {
+    display: inline-block;
+    font-weight: 400;
+    color: #212529;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .fcf-btn {
+        transition: none;
+    }
+}
+
+.fcf-btn:hover {
+    color: #212529;
+    text-decoration: none;
+}
+
+.fcf-btn:focus, .fcf-btn.focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.fcf-btn-primary {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.fcf-btn-primary:hover {
+    color: #fff;
+    background-color: #0069d9;
+    border-color: #0062cc;
+}
+
+.fcf-btn-primary:focus, .fcf-btn-primary.focus {
+    color: #fff;
+    background-color: #0069d9;
+    border-color: #0062cc;
+    box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
+}
+
+.fcf-btn-lg, .fcf-btn-group-lg>.fcf-btn {
+    padding: 0.5rem 1rem;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    border-radius: 0.3rem;
+}
+
+.fcf-btn-block {
+    display: block;
+    width: 100%;
+}
+
+.fcf-btn-block+.fcf-btn-block {
+    margin-top: 0.5rem;
+}
+
+input[type="submit"].fcf-btn-block, input[type="reset"].fcf-btn-block, input[type="button"].fcf-btn-block {
+    width: 100%;
+}
