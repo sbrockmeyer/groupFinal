@@ -10,3 +10,28 @@
 //   // perform actions on the collection object
 //   client.close();
 // });
+const dataAccess = require("./dataaccess");
+const cors = require('cors');
+
+const express = require('express');
+
+const app = express();
+
+const PORT = 4000;
+
+app.use(cors());
+
+app.get("/", function(req, res){
+    res.send("MHW API");
+});
+
+app.get('/monsters', async function(req,res){
+    var monsters = await dataAccess.DA.getAllMonsters();
+    console.log(monsters);
+    res.json(monsters);
+});
+
+
+
+
+app.listen(PORT, ()=> console.log(`Express listening on port: ${PORT}`));
