@@ -37,6 +37,12 @@ app.get('/locals', async function(req, res){
     res.json(locations);
 })
 
+app.get('/items', async function(req, res){
+    var items = await dataAccess.DA.getAllItems();
+    console.log(items);
+    res.json(items);
+})
+
 
 
 
