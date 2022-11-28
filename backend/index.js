@@ -31,6 +31,12 @@ app.get('/monsters', async function(req,res){
     res.json(monsters);
 });
 
+app.get('/locals', async function(req, res){
+    var locations = await dataAccess.DA.getAllLocales();
+    console.log(locations);
+    res.json(locations);
+})
+
 
 
 
