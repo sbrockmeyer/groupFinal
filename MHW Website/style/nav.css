@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Shojumaru&display=swap');
+
+input[type=text] {
+    /* float: right; */
+    padding: 5px;
+    border: none;
+    margin-top: 35px;
+    margin-right: 1px;
+    margin-left: 15px;
+    font-size: 17px;
+}
+
+nav {
+    float: right;
+}
+
+nav ul {
+    margin: 0;
+    margin-right: 50px;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    display: inline-block;
+    margin-left: 70px;
+    padding-top: 35px;
+    font-family: 'Shojumaru', cursive;
+
+    position: relative;
+}
+
+nav a {
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+nav a:hover {
+    font-style: italic;
+}
+
+nav a::before {
+    content: '';
+    display: block;
+    height: 5px;
+    width: 100%;
+    background-color: black;
+
+    position: absolute;
+
+    margin-top: 25px;
+    top: 0;
+    width: 0%;
+
+    transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before{
+    width: 100%;
+}
