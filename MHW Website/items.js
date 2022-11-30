@@ -1,4 +1,4 @@
-let url = `https://mhw-db.com/items`;
+let url = `http://localhost:4000/items`;
 
 let data;
 let list = document.getElementById("itemList");

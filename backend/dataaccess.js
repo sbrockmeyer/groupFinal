@@ -52,5 +52,31 @@ exports.DA = {
         }finally{
             client.close();
         }
+    },
+    findMonstersBySpecies: async function(species){
+        const client = await MongoClient.connect(uri);
+        try{
+            const db = client.db(monsterDBName);
+            const collection = db.collection(monsterCollection);
+            var results = await collection.find({"species": species}).toArray();
+            return results;
+        }catch(e){
+            console.log(e);
+        }finally{
+            client.close();
+        }
+    },
+    findItemsByRarity: async function(rarity){
+        const client = await MongoClient.connect(uri);
+        try{
+            const db = client.db(itemsDBName);
+            const collection = db.collection(itemsCollection);
+            var results = await collection.find({"rarity": rarity}).toArray();
+            return results;
+        }catch(e){
+            console.log(e);
+        }finally{
+            client.close();
+        }
     }
 }

@@ -1,4 +1,4 @@
-let url = `https://mhw-db.com/locations`;
+let url = `http://localhost:4000/locals`;
 
 let data;
 let list = document.getElementById("localeList");

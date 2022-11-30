@@ -14,6 +14,7 @@ const dataAccess = require("./dataaccess");
 const cors = require('cors');
 
 const express = require('express');
+const { resourceUsage } = require("process");
 
 const app = express();
 
@@ -35,13 +36,29 @@ app.get('/locals', async function(req, res){
     var locations = await dataAccess.DA.getAllLocales();
     console.log(locations);
     res.json(locations);
-})
+});
 
 app.get('/items', async function(req, res){
     var items = await dataAccess.DA.getAllItems();
     console.log(items);
     res.json(items);
-})
+});
+
+app.get('/itemsbyrarity/:rarity', async (req, res) => {
+    var rarity = parseInt(req.params.rarity);
+    const items = await dataAccess.DA.findItemsByRarity(rarity);
+    console.log(rarity);
+    res.json(items);
+    console.log(rarity);
+});
+
+app.get('/monstersbyspecies/:species', async (req, res) => {
+    var species = req.params.species;
+    const monsters = await dataAccess.DA.findMonstersBySpecies(species);
+    res.json(monsters);
+    console.log(monsters);
+});
+
 
 
 

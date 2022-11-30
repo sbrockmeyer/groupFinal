@@ -1,4 +1,4 @@
-let url = `https://mhw-db.com/monsters`;
+let url = `http://localhost:4000/monsters`;
 
 const testtext = document.getElementById('testtext');
 
