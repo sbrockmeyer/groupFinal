@@ -28,10 +28,11 @@ function buildMonList(data)
     document.getElementById('monsterInfo').appendChild(ul);
 
     let li = document.createElement('li');
-    li.innerHTML += "<h2 class =" + className + ">" + "Name" + "</h2>" + 
-    "<h2 class =" + classType + ">" + "Type" + "</h2>" +
-    "<h2 class =" + classSpecies + ">" + "Species" + "</h2>" +
-    "<h2 class =" + classDescription + ">" + "Description" + "</h2>";
+    li.innerHTML += 
+    `<h2 class=${className}> Name </h2>` +
+    `<h2 class=${classType}> Type </h2>` +
+    `<h2 class=${classSpecies}> Species </h2>` +
+    `<h2 class=${classDescription}> Description </h2>`;
     ul.appendChild(li);
 
     for (var I = 0; I < 58; I++)

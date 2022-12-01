@@ -27,9 +27,10 @@ function buildLocaleList(data)
     document.getElementById('localeList').appendChild(ul);
 
     let li = document.createElement('li');
-    li.innerHTML += "<h2 class =" + className + ">" + "Name" + "</h2>" + 
-    "<h2 class =" + classZones + ">" + "Zones" + "</h2>" +
-    "<h2 class =" + classCamps + ">" + "Camps" + "</h2>";
+    li.innerHTML += 
+    `<h2 class=${className}> Name </h2>` + 
+    `<h2 class=${classZones}> Zones </h2>` +
+    `<h2 class=${classCamps}> Camps </h2>`;
     ul.appendChild(li);
 
     for (var I = 0; I < 14; I++)

@@ -33,10 +33,10 @@ function buildItemList(data)
     //add carryLimit label
     let li = document.createElement('li');
     li.innerHTML += 
-    `<h2 class =` + className + `>Name` + `</h2>` + 
-    "<h2 class =" + classRarity + ">" + "Rarity" + "</h2>" +
-    "<h2 class =" + classValue + ">" + "Value" + "</h2>" +
-    "<h2 class =" + classDescription + ">" + "Description" + "</h2>";
+    `<h2 class=${className}> Name </h2>` + 
+    `<h2 class=${classRarity}> Rarity </h2>` +
+    `<h2 class=${classValue}> Value </h2>` +
+    `<h2 class=${classDescription}> Description </h2>`;
     ul.appendChild(li);
 
       //add carryLimit 
