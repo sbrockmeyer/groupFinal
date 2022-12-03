@@ -2,6 +2,9 @@ let url = `http://localhost:4000/locals`;
 
 let data;
 let list = document.getElementById("localeList");
+let searchTerm = document.getElementById("searchTerm");
+let searchList = [];
+
 
 fetch(url)
     .then(response => response.json())
@@ -19,7 +22,23 @@ let className = '"localeName"';
 let classZones = '"localeZones"';
 let classCamps = '"localeCamps"';
 
+function search(){
+    //findByRarity or searchTerm for any
 
+    list.innerHTML = "";
+    data.forEach(element => {
+        if(element.name.toLowerCase().includes(searchTerm.value)){
+            searchList.push(element);
+        }
+    });
+    
+    buildLocaleList(searchList)
+
+
+    var clearButton = document.createElement("BUTTON");
+    clearButton.innerHTML("Reset List");
+    document.getElementById("clearButton").appendChild(clearButton);
+}
 
 function buildLocaleList(data)
 {

@@ -3,7 +3,9 @@ let url = `http://localhost:4000/monsters`;
 const testtext = document.getElementById('testtext');
 
 let data;
-let list = document.getElementById("monsterList");
+let list = document.getElementById("monsterInfo");
+let searchTerm = document.getElementById("searchTerm");
+let searchList = [];
 
 fetch(url)
     .then(response => response.json())
@@ -21,6 +23,24 @@ let className = '"monsterName"';
 let classType = '"monsterType"';
 let classSpecies = '"monsterSpecies"';
 let classDescription = '"monsterDescription"';
+
+function search(){
+    //findByRarity or searchTerm for any
+
+    list.innerHTML = "";
+    data.forEach(element => {
+        if(element.name.toLowerCase().includes(searchTerm.value)){
+            searchList.push(element);
+        }
+    });
+    
+    buildMonList(searchList)
+
+
+    var clearButton = document.createElement("BUTTON");
+    clearButton.innerHTML("Reset List");
+    document.getElementById("clearButton").appendChild(clearButton);
+}
 
 function buildMonList(data)
 {

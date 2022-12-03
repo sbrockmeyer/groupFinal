@@ -3,18 +3,27 @@ let url = `http://localhost:4000/items`;
 let data;
 let list = document.getElementById("itemList");
 let searchTerm = document.getElementById("searchTerm");
+let searchList = [];
 
 fetch(url)
     .then(response => response.json())
     .then(item =>{
         data = item;
         main1();
+        
     })
 
 const main1 = () =>{
     console.log(data);
+    
     buildItemList(data);
+    
+    
 }
+
+
+
+
 
 let className = '"itemName"';
 let classRarity = '"itemRarity"';
@@ -24,9 +33,25 @@ let classDescription = '"itemDescription"';
 
 function search(){
     //findByRarity or searchTerm for any
+
+    list.innerHTML = "";
+    data.forEach(element => {
+        if(element.name.toLowerCase().includes(searchTerm.value)){
+            searchList.push(element);
+        }
+    });
+    
+    buildItemList(searchList)
+
+
+    var clearButton = document.createElement("BUTTON");
+    clearButton.innerHTML("Reset List");
+    document.getElementById("clearButton").appendChild(clearButton);
 }
 function buildItemList(data)
 {
+    
+    
     ul = document.createElement('ul');
     document.getElementById('itemList').appendChild(ul);
 
