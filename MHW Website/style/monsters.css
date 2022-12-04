@@ -3,13 +3,13 @@
 .small_monsters{
     font-family: 'Shojumaru', cursive;
     float: left;
-    padding-left: 650px;
+    padding-left: 550px;
 }
 
 .large_monsters{
     font-family: 'Shojumaru', cursive;
     float: right;
-    padding-right: 650px;
+    padding-right: 550px;
 }
 
 .monsterInfo ul li{
