@@ -1,15 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Shojumaru&display=swap');
 
-input[type=text] {
-    /* float: right; */
-    padding: 5px;
-    border: none;
-    margin-top: 35px;
-    margin-right: 1px;
-    margin-left: 15px;
-    font-size: 17px;
-}
-
 nav {
     float: right;
 }

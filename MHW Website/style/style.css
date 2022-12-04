@@ -5,7 +5,8 @@ html {
     background-image: url("../assests/background.jpg");
     align-self: stretch;
     background-size: cover;
-    background-repeat: no-repeat;
+    /* background-repeat: no-repeat; */
+    background-repeat: repeat-y;
 }
 
 html, 
@@ -35,14 +36,31 @@ header::after {
 }
 
 /* Style the search box inside the navigation bar */
-.search{
-    
+input[type=text] {
+    padding: 5px;
+    border: none;
+    margin-top: 35px;
+    /* margin-left: 15px; */
+    font-size: 17px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.searchbutton{
+    margin-top: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
 }
 
 body {
     margin: 0;
     padding: 0;
     /* background-color: #e0e0e07a; */
+    height: 100%;
+    width: 100%;
     background-color: #d489ff48;
 }
 
