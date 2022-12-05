@@ -2,24 +2,28 @@
 
 .itemList ul li{
     display: flex;
-
-    margin: 2px;
-    padding: 2px;
+    
+    /* margin: 2px;
+    padding: 2px; */
     border: 3px solid rgb(0, 0, 0);
     font-family: 'Shojumaru', cursive;
     color: rgb(0, 0, 0);
-    width: 1700px;
+    /* width: 1700px; */
     background-color: rgba(80, 80, 80, 0.384);
 }
 
 .itemList ul{
-    height: 761px; width: 1800px;
-    overflow:hidden; overflow-y:scroll;
+    margin-left: auto;
+    margin-right: auto;
+    height: 761px;
+     width: 1250px;
+    /* overflow:hidden; 
+    overflow-y:scroll; */
 
     background-color: rgba(27, 27, 27, 0.247);
 }
 
-.itemName {
+.itemName,.itemDescription, .itemRarity, .itemValue, .itemCarryLimit {
     margin: 2px;
     padding: 2px;
 
@@ -27,39 +31,9 @@
     background-color: rgba(255, 255, 255, 0.815);
 
     width: 200px;
-    height: 50px;
+    height: 60px;
     text-align: center;
 }
-
-.itemRarity {
-    margin: 2px;
-    padding: 2px;
-
-    border: 3px solid rgb(0, 0, 0);
-    background-color: rgba(255, 255, 255, 0.815);
-    width: 200px;
-    height: 50px;
-    text-align: center;
-}
-
-.itemValue {
-    margin: 2px;
-    padding: 2px;
-
-    border: 3px solid rgb(0, 0, 0);
-    background-color: rgba(255, 255, 255, 0.815);
-    width: 200px;
-    height: 50px;
-    text-align: center;
-}
-
-.itemDescription {
-    margin: 2px;
-    padding: 2px;
-
-    border: 3px solid rgb(0, 0, 0);
-    background-color: rgba(255, 255, 255, 0.815);
-    width: 1250px;
-    height: 50px;
-    text-align: center;
+.itemDescription{
+    width: 500px;
 }
