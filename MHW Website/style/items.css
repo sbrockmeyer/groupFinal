@@ -13,10 +13,7 @@
 }
 
 .itemList ul{
-    margin-left: auto;
-    margin-right: auto;
-    height: 761px;
-     width: 1250px;
+    height: 761px; width: 1800px;
     /* overflow:hidden; 
     overflow-y:scroll; */
 

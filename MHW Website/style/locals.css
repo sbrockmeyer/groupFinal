@@ -8,13 +8,15 @@
     border: 3px solid rgb(0, 0, 0);
     font-family: 'Shojumaru', cursive;
     color: rgb(0, 0, 0);
-    width: 1700px;
+    width: 1450px;
     background-color: rgba(80, 80, 80, 0.384);
 }
 
 .localeList ul{
-    height: 761px; width: 1800px;
-    overflow:hidden; overflow-y:scroll;
+    height: 761px; 
+    width: 1450;
+    /* overflow:hidden;
+    overflow-y:scroll; */
 
     background-color: rgba(27, 27, 27, 0.247);
 }
@@ -47,7 +49,7 @@
 
     border: 3px solid rgb(0, 0, 0);
     background-color: rgba(255, 255, 255, 0.815);
-    width: 1250px;
+    width: 1130px;
     height: 50px;
     text-align: center;
 }
