@@ -61,6 +61,7 @@ function buildItemList(data)
     `<h2 class=${className}> Name </h2>` + 
     `<h2 class=${classRarity}> Rarity </h2>` +
     `<h2 class=${classValue}> Value </h2>` +
+    `<h2 class=${classCarryLimit}> Carry Limit </h2>` +
     `<h2 class=${classDescription}> Description </h2>`;
     ul.appendChild(li);
 
@@ -71,6 +72,7 @@ function buildItemList(data)
         li.innerHTML += "<p class =" + className + ">" + data[I].name + "</p>" + 
         "<p class =" + classRarity + ">" + data[I].rarity + "</p>" +
         "<p class =" + classValue + ">" + data[I].value + "</p>" +
+        "<p class =" + classCarryLimit + ">" + data[I].carryLimit+ "</p>" +
         "<p class =" + classDescription + ">" + data[I].description + "</p>";
         ul.appendChild(li);
     };
